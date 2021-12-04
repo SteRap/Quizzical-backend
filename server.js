@@ -11,11 +11,9 @@ import handleGame from "./Controllers/game.js";
 
 const db = knex({
   client: "pg",
-  connection: {
-    host: "127.0.0.1",
-    user: "stefanorapino",
-    password: "",
-    database: "quizzical",
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
   },
 });
 
