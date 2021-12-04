@@ -52,6 +52,6 @@ app.put("/game", (req, res) => {
   handleGame(res, req, db);
 });
 
-app.listen(5000, () => {
-  console.log("app is running on port 5000");
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`app is running on port ${process.env.PORT}`);
 });
