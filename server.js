@@ -44,7 +44,7 @@ app.get("/profile/:id", (req, res) => {
 
 //! game --> PUT --> score
 app.put("/game", (req, res) => {
-  handleGame(res, req, db);
+  handleGame(req, res, db);
 });
 
 app.listen(process.env.PORT || 5000, () => {
